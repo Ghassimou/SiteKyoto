@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Site Kyoto</title>
+  </head>
+  <body>
+    <header class="header__nav">
+      <nav class="header__menu">
+        <ul class="nav__menu">
+          <li class="menu__list">
+            <a class="menu__link" href="#home">Acceuil</a>
+          </li>
+          <li class="menu__list">
+            <a class="menu__link" href="#asym">Que faire ?</a>
+          </li>
+          <li class="menu__list">
+            <a class="menu__link" href="#price">Tarifs</a>
+          </li>
+          <li class="menu__list">
+            <a class="menu__link" href="#contact">Contacte</a>
+          </li>
+        </ul>
+        <img
+          class="menu__icone open"
+          src="/ressources/menu.svg"
+          alt="Icone menu bar de navigation"
+        />
+        <img
+          class="menu__icone"
+          src="/ressources/close_icone.svg"
+          alt="Icone menu bar de navigation"
+        />
+      </nav>
+      <img
+        class="header__logo"
+        id="home"
+        src="/ressources/logo-porte-japon.jpg"
+        alt="le logo du site Kyoto"
+      />
+      <h1 class="header__title">Découvrez Kyoto</h1>
+      <p class="header__subtitle">La ville impérial du Japon</p>
+      <button class="header__btn">
+        <a class="asym" href="#asym">En savoir plus</a>
+      </button>
+    </header>
+
+    <!-- section asymétrique -->
+
+    <main id="asym" class="main__asym">
+      <h2 class="main__title">Que faire à Kyoto</h2>
+      <section class="main__section section__gird--left1 section__asym--left">
+        <div class="section__div--left">
+          <h3 class="div__subtitle div__subtile--left">Les temples de Kyoto</h3>
+          <p class="section__div--text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
+            similique voluptatem! Minima deleniti enim quibusdam? Accusantium
+            culpa ex adipisci veniam, modi, animi explicabo voluptatum eum
+            voluptatem labore dolore, quaerat neque eaque doloribus architecto
+            quae officia odio nemo perspiciatis? Ipsum hic, iste vitae ducimus
+            accusamus suscipit dolores ipsa modi porro. Distinctio.
+          </p>
+          <button class="section__btn section__btn--left">
+            En savoir plus
+          </button>
+        </div>
+      </section>
+      <img
+        class="main__image image__grid--left1"
+        src="/ressources/kyoto-temple.jpg"
+        alt="Couloir du temple à Kyoto"
+      />
+      <section class="main__section section__gird--right1 section__asym--right">
+        <div class="section__div--right">
+          <h3 class="div__subtitle div__subtitle--right">Les châteaux</h3>
+          <p class="section__div--text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
+            similique voluptatem! Minima deleniti enim quibusdam? Accusantium
+            culpa ex adipisci veniam, modi, animi explicabo voluptatum eum
+            voluptatem labore dolore, quaerat neque eaque doloribus architecto
+            quae officia odio nemo perspiciatis? Ipsum hic, iste vitae ducimus
+            accusamus suscipit dolores ipsa modi porro. Distinctio.
+          </p>
+          <button class="section__btn btn__grid-right1">En savoir plus</button>
+        </div>
+      </section>
+      <img
+        class="main__image image__grid--right1"
+        src="/ressources/chateau-kyoto.jpg"
+        alt="Château de Kyoto"
+      />
+      <section class="main__section section__grid--left2 section__asym--left">
+        <div class="section__div--left">
+          <h3 class="div__subtitle div__subtitle--left">
+            Folklore et culture.
+          </h3>
+          <p class="section__div--text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
+            similique voluptatem! Minima deleniti enim quibusdam? Accusantium
+            culpa ex adipisci veniam, modi, animi explicabo voluptatum eum
+            voluptatem labore dolore, quaerat neque eaque doloribus architecto
+            quae officia odio nemo perspiciatis? Ipsum hic, iste vitae ducimus
+            accusamus suscipit dolores ipsa modi porro. Distinctio.
+          </p>
+          <button class="section__btn btn__grid-left2">En savoir plus</button>
+        </div>
+      </section>
+      <img
+        class="main__image image__grid--left2"
+        src="/ressources/geisha.jpg"
+        alt="Une geisha"
+      />
+      <div class="main__line--left"></div>
+      <div class="main__line--right"></div>
+
+      <section class="section__parallax">
+        <p class="language japon">冒険に行く</p>
+        <span class="language frensh">Partez à l'aventure</span>
+      </section>
+
+      <!-- Prices Section -->
+
+      <section class="section__card" id="tarifs">
+        <h3 class="section__title-card">Laissez-vous guider...</h3>
+        <hr class="line__title-card" />
+        <div class="contain__card">
+          <div class="card__price">
+            <h4 class="card__subtitle">Classique</h4>
+            <span class="price">100€</span>
+            <p class="card__text">✔️ Visite des châteaux</p>
+            <p class="card__text">✔️ Visite de la ville</p>
+            <p class="card__text">✔️ Spectacle folklorique</p>
+            <p class="card__text">❌ Restaurant typique d'exception</p>
+            <p class="card__text">❌ Visite culturelle sur plusieurs jours</p>
+            <p class="card__text">❌ Accès privé à des lieux grandioses</p>
+
+            <a class="link__to-book" href="#contact">Réservez un guide</a>
+          </div>
+
+          <div class="card__price">
+            <h4 class="card__subtitle">Découverte</h4>
+            <span class="price">250€</span>
+            <p class="card__text">✔️ Visite des châteaux</p>
+            <p class="card__text">✔️ Visite de la ville</p>
+            <p class="card__text">✔️ Spectacle folklorique</p>
+            <p class="card__text">✔️ Restaurant typique d'exception</p>
+            <p class="card__text">❌ Visite culturelle sur plusieurs jours</p>
+            <p class="card__text">❌ Accès privé à des lieux grandioses</p>
+
+            <a class="link__to-book" href="#contact">Réservez un guide</a>
+          </div>
+
+          <div class="card__price">
+            <h4 class="card__subtitle">Exception</h4>
+            <span class="price">500€</span>
+            <p class="card__text">✔️ Visite des châteaux</p>
+            <p class="card__text">✔️ Visite de la ville</p>
+            <p class="card__text">✔️ Spectacle folklorique</p>
+            <p class="card__text">✔️ Restaurant typique d'exception</p>
+            <p class="card__text">✔️ Visite culturelle sur plusieurs jours</p>
+            <p class="card__text">✔️ Accès privé à des lieux grandioses</p>
+
+            <a class="link__to-book" href="#contact">Réservez un guide</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <!-- Section Contact -->
+
+      <section class="section__contact" id="contact">
+        <h2 class="section__conatct-title"><strong>Rentrons</strong> en contact</h2>
+        <div class="div__contain-form">
+          <form class="form__contain">
+            <div class="form__item">
+              <label for="fist-name">Entrez votre prénom</label>
+              <input type="text" placeholder="Prénom" required id="fist-name" />
+            </div>
+            <div class="form__item">
+              <label for="name">Entrez votre nom</label>
+              <input type="text" placeholder="Nom" required id="name" />
+            </div>
+            <div class="form__item">
+              <textarea
+                id="msg"
+                placeholder="Votre message"
+                required
+              ></textarea>
+            </div>
+            <div class="form__item">
+              <input type="submit" value="ENVOYER" class="form__btn" />
+            </div>
+          </form>
+        </div>
+      </section>
+      <div class="contain__text-copyright"><p class="text__copyright">Tous Droits Réservés &copy;</p></div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

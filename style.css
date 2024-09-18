@@ -1,0 +1,727 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Nunito, sans-serif;
+}
+
+.header__menu {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(to bottom, #333, #626262);
+  z-index: 9999;
+}
+
+.nav__menu {
+  background: linear-gradient(to bottom, #333, #626262);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.menu__list {
+  list-style: none;
+}
+
+.menu__link {
+  text-decoration: none;
+  color: #f1f1f1;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.menu__link::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 0%;
+  height: 2px;
+  background: #f1f1f1;
+  transition: width 0.2s ease-in-out;
+}
+
+.menu__link:hover::after {
+  width: 100%;
+}
+
+.menu__icone {
+  position: absolute;
+  width: 50px;
+  top: 10px;
+  right: 15px;
+  display: none;
+}
+
+.header__nav {
+  width: 100%;
+  height: 100vh;
+  min-height: 1150px;
+  background-image: url(/ressources/accueil-pic-lum-down.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  border-bottom: 1px dotted #777;
+  padding-top: 1px;
+}
+
+.header__logo {
+  display: block;
+  width: 180px;
+  border-radius: 50%;
+  margin: 109px auto 0;
+}
+
+.header__title {
+  text-align: center;
+  font-size: 100px;
+  text-shadow: 0 0 10px #000;
+  color: #f1f1f1;
+  font-family: Merienda, sans-serif;
+}
+
+.header__subtitle {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: #f1f1f1;
+  text-shadow: 0 0 10px #000;
+}
+
+.header__btn {
+  width: 200px;
+  height: 70px;
+  margin: 30px auto 0;
+  background: crimson;
+  border-radius: 9999px;
+  border: 1px solid #333;
+  font-size: 22px;
+  display: block;
+  transition: all 0.2s ease-in-out;
+}
+
+.header__btn:hover {
+  background: rgb(177, 0, 36);
+  color: #fff;
+}
+.asym {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 850px) {
+  .header__nav {
+    background-position: right;
+    /* min-height: 800px; */
+  }
+  .header__logo {
+    margin: 70px auto 0;
+  }
+
+  .header__title {
+    font-size: 50px;
+  }
+
+  .header__text {
+    font-size: 23px;
+  }
+
+  .header__btn {
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    margin: 15px auto 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header__logo {
+    width: 150px;
+  }
+
+  .header__title {
+    font-size: 25px;
+  }
+
+  .header__text {
+    font-size: 18px;
+  }
+
+  .header__btn {
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .nav__menu {
+    position: relative;
+    padding-top: 70px;
+    /* flex-direction: column; */
+    height: auto;
+    display: none;
+  }
+
+  .nav__menu.active {
+    display: block;
+  }
+
+  .menu__list {
+    height: 70px;
+    /* justify-content: center; */
+  }
+
+  .open {
+    display: block;
+  }
+}
+
+/* section asymétrique */
+
+.main__asym {
+  display: grid;
+  grid-template-rows: 200px repeat(3, auto) 100px 300px auto;
+  grid-template-columns: 1fr 600px 1fr;
+  background: #f1f1f1;
+}
+
+.main__title {
+  grid-area: 1 / 1 / 2 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+.main__section {
+  position: relative;
+  height: 750px;
+  background: #333;
+  color: #f1f1f1;
+  border-radius: 2px;
+  margin-bottom: 250px;
+}
+
+/* ***************************** */
+/* Les sous titres des divs  */
+/* ***************************** */
+
+.div__subtitle {
+  font-size: 35px;
+  margin: 30px 15px;
+  white-space: nowrap;
+}
+
+.div__subtitle--right {
+  position: relative;
+}
+
+/* ***************************** */
+/* Les boutons des grides  */
+/* ***************************** */
+
+.section__btn {
+  outline: none;
+  border: none;
+  display: block;
+  border-radius: 9999px;
+  font-size: 20px;
+  color: #f1f1f1;
+  background: crimson;
+  border: 1px solid #333;
+  padding: 20px 35px;
+  margin: 35px auto;
+  cursor: pointer;
+}
+
+/* ***************************** */
+/* Les images des grides */
+/* ***************************** */
+
+.main__image {
+  width: 500px;
+  height: 700px;
+  object-fit: cover;
+  position: relative;
+}
+
+/* ***************************** */
+/* Les paragraphe des sections  */
+/* ***************************** */
+
+.section__div--text {
+  line-height: 40px;
+  padding: 15px;
+}
+
+/* ***************************** */
+/* Le positionnement des images dans les grides sur la gauche  */
+/* ***************************** */
+
+.section__gird--left1,
+.image__grid--left1 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+/* ***************************** */
+/* Le positionnement des images dans les grides sur la droite  */
+/* ***************************** */
+
+.section__gird--right1,
+.image__grid--right1 {
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+/* ***************************** */
+/* Le positionnement des images dans les grides sur la gauche   */
+/* ***************************** */
+
+.section__grid--left2,
+.image__grid--left2 {
+  grid-area: 4 / 2 / 5 / 3;
+}
+
+/* ***************************** */
+/* le positionnement des sections asym  plus à gauche */
+/* ***************************** */
+
+.section__asym--left {
+  left: -300px;
+}
+
+.section__asym--right {
+  right: -300px;
+}
+
+/* ***************************** */
+/* les images asym gauche */
+/* ***************************** */
+
+.image__grid--left1,
+.image__grid--left2 {
+  top: 130px;
+  left: 20px;
+}
+
+/* ***************************** */
+/* les images asym droite */
+/* ***************************** */
+
+.image__grid--right1 {
+  top: 130px;
+  left: 100px;
+}
+
+/* ***************************** */
+/* Les bloque de texte dans les sections de gauche */
+/* ***************************** */
+
+.section__div--left {
+  width: 50%;
+  height: 100%;
+}
+
+/* ***************************** */
+/* Les bloque de texte dans les sections de droite */
+/* ***************************** */
+
+.section__div--right {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100%;
+}
+
+/* ***************************** */
+/* Les ligne verticales */
+/* ***************************** */
+
+.main__line--left {
+  grid-area: 1 / 2 / 5 / 3;
+  border-left: 2px solid #333;
+}
+
+.main__line--right {
+  grid-area: 1 / 3 / 5 / 4;
+  border-left: 2px solid #333;
+}
+
+@media screen and (max-width: 1200px) {
+  .main__asym {
+    grid-template-rows: 200px repeat(6, auto) 100px 300px 120px auto;
+  }
+  .main__title {
+    font-size: 50px;
+    padding-bottom: 0;
+  }
+
+  /* repeat */
+  .section__gird--left1 {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  .image__grid--left1 {
+    grid-area: 3 / 2 / 4 / 3;
+  }
+
+  .section__gird--right1 {
+    grid-area: 4 / 2 / 5 / 3;
+  }
+
+  .image__grid--right1 {
+    grid-area: 5 / 2 / 6 / 3;
+  }
+
+  .section__grid--left2 {
+    grid-area: 6 / 2 / 7 / 3;
+  }
+
+  .image__grid--left2 {
+    grid-area: 7 / 2 / 8 / 3;
+  }
+  /* ajoiuter grid */
+  .main__section {
+    height: 100%;
+    margin-bottom: 0;
+  }
+
+  .main__image {
+    position: static;
+    width: 600px;
+    height: 750px;
+  }
+
+  .section__asym--left,
+  .section__asym--right {
+    top: 0;
+    left: 0;
+  }
+
+  .image__grid--right1 {
+    top: 0;
+    left: 0;
+  }
+  .section__asym--left {
+    left: 0;
+  }
+
+  .section__asym--right {
+    left: 0;
+  }
+  .section__div--left {
+    width: 100%;
+    height: 100%;
+  }
+
+  .div__subtitle--left {
+    text-align: center;
+  }
+
+  .section__div--text {
+    font-size: 20px;
+    line-height: 1.8;
+    padding: 15px;
+  }
+
+  .section__div--right {
+    position: static;
+    width: 100%;
+    height: 100%;
+  }
+
+  .section__btn {
+    font-size: 20px;
+    padding: 15px 30px;
+    margin-bottom: 30px;
+  }
+
+  .main__line--left {
+    grid-area: 1 / 2 / 9 / 3;
+  }
+  
+  .main__line--right {
+    grid-area: 1 / 3 / 9 / 4;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main__asym {
+    grid-template-rows: 150px repeat(6, auto) 100px 300px 120px auto;
+    grid-template-columns: 100%;
+  }
+
+  .main__line--left,
+  .main__line--right {
+    display: none;
+  }
+
+  .main__title {
+    font-size: 30px;
+  }
+
+  .main__section,
+  .main__image {
+    grid-area: auto;
+  }
+
+  .main__image {
+    width: 100%;
+    height: 500px;
+  }
+
+  .div__subtitle {
+    font-size: 25px;
+  }
+}
+
+.section__parallax {
+  display: flex;
+  width: 100%;
+  height: 300px;
+  background: url(ressources/parallax-large-flou.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* grid area */
+  grid-area: 5 / 1 / 5 / -1;
+}
+
+@media screen and (max-width: 1200px) {
+  .section__parallax {
+    grid-area: 9 / 1 / 9/ -1;
+  }
+}
+
+.language {
+  color: #f1f1f1;
+}
+
+.japon {
+  font-size: 65px;
+}
+
+.frensh {
+  display: block;
+  font-size: 25px;
+}
+
+@media screen and (max-width: 400px) {
+  .section__parallax {
+    grid-area: 9 / 1 / 9 / -1;
+  }
+
+  .japon {
+    font-size: 55px;
+  }
+
+  .section-tarifs {
+    grid-area: 10 / 1 / 10 / -1;
+  }
+}
+
+.section__card {
+  grid-area: 11 / 1 / 11 / -1;
+  padding-bottom: 150px;
+  border-bottom: 1px dashed #333;
+}
+
+.section__title-card {
+  font-size: 45px;
+  /* margin: 0px 0 20px; */
+  /* padding: 0 30px; */
+  text-align: center;
+}
+
+.line__title-card {
+  width: 200px;
+  margin: 20px auto 80px;
+}
+
+.contain__card {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card__price {
+  width: 350px;
+  height: auto;
+  border-radius: 5px;
+  margin: 15px 15px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgb(0, 0, 0.5);
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+.card__price:hover {
+  transform: translateY(-5px);
+}
+
+.card__subtitle {
+  text-align: center;
+  padding: 25px 20px;
+  font-size: 35px;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  background: #ffafbf;
+}
+
+.price {
+  display: block;
+  text-align: center;
+  padding: 15px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.card__price:nth-child(2) .card__subtitle {
+  background: #ff5073;
+}
+
+.card__price:nth-child(3) .card__subtitle {
+  background: #ff0033;
+}
+
+.card__text {
+  font-size: 18px;
+  padding: 20px 10px;
+  border-top: 1px solid rgb(194, 197, 194);
+}
+
+.card__text:nth-last-of-type(odd) {
+  border-bottom: 1px solid rgb(194, 197, 194);
+}
+
+.card__text:nth-child(odd) {
+  background: rgba(195, 195, 195, 0.219);
+}
+
+.link__to-book {
+  display: block;
+  text-decoration: none;
+  border: 1px solid #333;
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  border-radius: 9999px;
+  color: #333;
+  font-size: 18px;
+  line-height: 50px;
+  margin: 20px auto;
+  transition: all 0.2s ease-in-out;
+}
+
+.link__to-book:hover {
+  background: #333;
+  color: #333;
+  background: #ffafbf;
+}
+
+.card__price:nth-child(2) .link__to-book:hover {
+  background: #ff5073;
+}
+
+.card__price:nth-child(3) .link__to-book:hover {
+  background: #ff0033;
+}
+
+.section__conatct-title {
+  text-align: center;
+  color: #333;
+  font-size: 45px;
+  font-weight: 400;
+  margin-bottom: 50px;
+  padding: 70px 0 0;
+}
+
+.div__contain-form {
+  margin: 0 auto;
+  width: 70%;
+}
+
+.form__item {
+  position: relative;
+  margin-bottom: 45px;
+}
+
+.form__item label{
+  color: #aaa;
+  font-size: 20px;
+}
+
+.form__item input {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  outline: none;
+  background: none;
+  border-bottom: 3px solid #aaa;
+  color: #666;
+  font-size: 20px;
+}
+
+textarea {
+  width: 100%;
+  height: 200px;
+  border: 3px solid #aaa;
+  border-radius: 3px;
+  padding: 5px;
+  resize: none;
+  outline: none;
+  font-size: 20px;
+  background: #f1f1f1;
+}
+
+.form__item:nth-child(4) {
+  margin-bottom: 25px;
+}
+
+.form__item .form__btn {
+  display: block;
+  width: auto;
+  padding: 15px 50px;
+  border: 3px solid rgb(144, 144, 144);
+  border-radius: 9999px;
+  background-image: -moz-linear-gradient(to right, transparent 50%, rgb(65, 65, 65) 50%, rgb(134, 134, 134));
+  background-size: 200%;
+  color: #333;
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.form__item .form__btn:hover {
+  color: #fff;
+  background-position: 100%;
+  border: 3px solid #fff;
+}
+
+.contain__text-copyright {
+  border-top: 1px solid #333;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.text__copyright{
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .form__item:nth-child(4) {
+    display: flex;
+    justify-content: center;
+  }
+}
