@@ -11,7 +11,7 @@
 
 .header__menu {
   width: 100%;
-  height: 60px;
+  height: 70px;
   z-index: 9999;
   position: fixed;
   top: 0;
@@ -71,9 +71,12 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-
   border-bottom: 1px dotted #777;
-  padding-top: 1px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .header__logo {
@@ -123,11 +126,10 @@
 @media screen and (max-width: 850px) {
   .header__nav {
     background-position: right;
-    /* min-height: 800px; */
   }
-  .header__logo {
+  /* .header__logo {
     margin: 70px auto 0;
-  }
+  } */
 
   .header__title {
     font-size: 50px;
@@ -141,13 +143,13 @@
     width: 150px;
     height: 50px;
     font-size: 18px;
-    margin: 15px auto 0;
+    /* margin: 15px auto 0; */
   }
 }
 
 @media screen and (max-width: 400px) {
   .header__logo {
-    width: 150px;
+    width: 130px;
   }
 
   .header__title {
